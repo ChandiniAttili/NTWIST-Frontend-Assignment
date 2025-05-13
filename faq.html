@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | NTWIST Assignment</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    details {
+      background: #fff;
+      border-radius: var(--radius);
+      margin-bottom: 1em;
+      box-shadow: 0 1px 4px #0001;
+      padding: 0.5em 1em;
+      transition: box-shadow 0.2s;
+    }
+    details[open] {
+      box-shadow: 0 2px 8px #0002;
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      padding: 0.5em 0;
+    }
+    summary:focus {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar">
+      <nav>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="index.html">Contact Form</a></li>
+          <li><a href="sort.html">Sortable List</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content scrollable">
+      <h1>Frequently Asked Questions</h1>
+      <section style="max-width:600px;">
+        <details>
+          <summary>What is this project about?</summary>
+          <div>This is a frontend assignment for NTWIST, demonstrating HTML, CSS, and JavaScript skills.</div>
+        </details>
+        <details>
+          <summary>How do I use the contact form?</summary>
+          <div>Fill in your name, email, and message, then click Send Message. You'll see a confirmation and time spent.</div>
+        </details>
+        <details>
+          <summary>How does the sortable list work?</summary>
+          <div>Click the Sort Alphabetically button to sort the list of names without reloading the page.</div>
+        </details>
+        <details>
+          <summary>Is JavaScript used on this page?</summary>
+          <div>No, this FAQ accordion uses only HTML and CSS.</div>
+        </details>
+      </section>
+    </main>
+  </div>
+</body>
+</html> 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form | NTWIST Assignment</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .star-rating {
+      display: flex;
+      gap: 0.25em;
+      font-size: 2rem;
+      margin: 1em 0;
+    }
+    .star {
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.2s;
+    }
+    .star.active {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar">
+      <nav>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="index.html">Contact Form</a></li>
+          <li><a href="sort.html">Sortable List</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content scrollable">
+      <h1>Contact Us</h1>
+      <form id="contact-form" novalidate>
+        <div class="grid" style="max-width: 400px;">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required pattern="[A-Za-z\s]{2,}" autocomplete="name" placeholder="Your Name">
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required minlength="5" rows="4" placeholder="Type your message..."></textarea>
+        </div>
+        <div style="margin:1em 0 0.5em 0;">
+          <span id="time-spent" style="font-size:0.95em; color:var(--primary);"></span>
+        </div>
+        <button type="submit">Send Message</button>
+        <div id="confirmation" style="display:none; color:green; margin-top:1em;"></div>
+      </form>
+      <section style="margin-top:2em; max-width:400px;">
+        <h2>Rate Your Experience</h2>
+        <div class="star-rating" aria-label="Star rating">
+          <span class="star" tabindex="0" role="button" aria-label="1 star">★</span>
+          <span class="star" tabindex="0" role="button" aria-label="2 stars">★</span>
+          <span class="star" tabindex="0" role="button" aria-label="3 stars">★</span>
+          <span class="star" tabindex="0" role="button" aria-label="4 stars">★</span>
+          <span class="star" tabindex="0" role="button" aria-label="5 stars">★</span>
+        </div>
+        <div id="rating-value" style="font-size:1em; color:var(--primary);"></div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/rating.js"></script>
+</body>
+</html> 
